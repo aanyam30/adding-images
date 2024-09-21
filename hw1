@@ -1,0 +1,14 @@
+import cv2
+
+image1 = cv2.imread('image4.jpg')
+image2 = cv2.imread('building.jpg')
+
+sum = cv2.addWeighted(image1, 0.8, image2, 0.2, 0)
+cv2.imshow('Adding images', sum)
+cv2.waitKey(0)
+
+diff = cv2.subtract(image1, image2)
+cv2.imshow('Subtracting images', diff)
+cv2.waitKey(0)
+
+cv2.destroyAllWindows()
